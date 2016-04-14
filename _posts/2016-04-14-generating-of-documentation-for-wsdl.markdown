@@ -3,6 +3,7 @@ layout: post
 title:  "Генерация документации по WSDL"
 date:   2016-04-14 16:00:59 +0300
 categories: cygwin, documentation, wcf, wsdl, xsl
+comments: true
 ---
 
 В проекте на php имею WCF веб-сервис. Хочу для него сгенерировать документацию для программиста. Окружение - Windows.
