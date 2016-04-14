@@ -2,7 +2,8 @@
 layout: post
 title:  "Доступ к внешней SD карте на MIUI 7"
 date:   2016-04-14 13:33:59 +0300
-categories: access, android 5, documents app, external, miui, redmi note 2, sd card, writable
+category: post
+tags: access, android 5, documents app, external, miui, redmi note 2, sd card, writable
 comments: true
 ---
 

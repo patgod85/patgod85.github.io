@@ -2,7 +2,8 @@
 layout: post
 title:  "Генерация документации по WSDL"
 date:   2016-04-14 16:00:59 +0300
-categories: cygwin, documentation, wcf, wsdl, xsl
+category: post
+tags: cygwin, documentation, wcf, wsdl, xsl
 comments: true
 ---
 
