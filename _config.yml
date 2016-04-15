@@ -17,7 +17,7 @@ url: "https://patgod85.github.io" # the base hostname & protocol for your site
 github_username:  patgod85
 permalink: pretty
 
-exclude: [README.MD, Gemfile, Gemfile.lock]
+exclude: [README.MD, Gemfile, Gemfile.lock, git-publish-io.bat]
 
 # Build settings
 markdown: kramdown
