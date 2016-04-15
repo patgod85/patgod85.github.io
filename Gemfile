@@ -6,4 +6,5 @@ group :jekyll_plugins do
     gem "kramdown"
     gem "jekyll-watch"
     gem "jekyll-tagging"
+    gem 'jekyll-sitemap'
 end
