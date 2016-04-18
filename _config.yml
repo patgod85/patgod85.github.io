@@ -9,7 +9,7 @@ timezone: Europe/Moscow
 encoding: utf-8
 
 # Site settings
-title: Few notes
+title: A few notes
 description: >
   Reina de mi vida
 baseurl: "" # the subpath of your site, e.g. /blog
