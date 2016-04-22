@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Look at you. And you will see
+Радуйтесь
 
-![Всё что я хотел рассказать о войне во Вьетнаме](/assets/images/zabriskiepoint.jpg)
+![17 April](/assets/images/about.jpg)
