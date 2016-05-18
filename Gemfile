@@ -7,4 +7,5 @@ group :jekyll_plugins do
     gem "jekyll-watch"
     gem "jekyll-tagging"
     gem 'jekyll-sitemap'
+    gem 'jekyll-gist'
 end
