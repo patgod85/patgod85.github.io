@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Проект в песочнице на Ember.js</title>
+    <meta name="description" content="План ознакомительного доклада для команды разработчиков.">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://patgod85.github.io/post/2016/07/08/ember-in-the-sandbox/">
+    <link rel="alternate" type="application/rss+xml" title="A few notes" href="https://patgod85.github.io/feed.xml">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+
+<body>
+
+    <header class="site-header">
+
+    <script type="text/javascript">
+        var host = "patgod85.github.io";
+        if ((host == window.location.host) && (window.location.protocol != "https:")) {
+            window.location.protocol = "https";
+        }
+    </script>
+
+    <div class="wrapper">
+
+        <a class="site-title" href="/">A few notes</a>
+
+        <nav class="site-nav">
+            <a href="#" class="menu-icon">
+                <svg viewBox="0 0 18 15">
+                    <path fill="#424242"
+                          d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                    <path fill="#424242"
+                          d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+                    <path fill="#424242"
+                          d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+                </svg>
+            </a>
+
+            <div class="trigger">
+                
+                
+                <a class="page-link" href="/about/">About</a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+        </nav>
+
+    </div>
+
+</header>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Проект в песочнице на Ember.js</h1>
+        <p class="post-meta"><time datetime="2016-07-08T00:00:00+00:00" itemprop="datePublished">Jul 8, 2016</time></p>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+        <p>План ознакомительного доклада для команды разработчиков.</p>
+
+<h1 id="ember">Знакомство с ember</h1>
+
+<ol>
+  <li>Ember.js - это фреймворк для создания SPA</li>
+  <li>Делать некий туториал не имеет смысла, ибо таковой есть на официальном сайте <emberjs.com></emberjs.com></li>
+  <li>Прихожу к выводу, что нет фреймворков, которые как гласят их лозунги, простые и лёгкие для использования. За сколькие 
+брался - везде найдутся подводные камни, которые заберут уйму времени и попортят крови. Погружение в Ember заняло недели 2.</li>
+  <li>В целом мои ощущения положительные</li>
+  <li>Лучше расскажу от подходе к написанию проекта.</li>
+</ol>
+
+<h1 id="section">Описание проекта</h1>
+<ol>
+  <li>Табель рабочего времени. Замена имеющегося решения в plain xls</li>
+  <li>Несколько команд или отделов</li>
+  <li>Многопользовательский режим</li>
+  <li>Примитивная отчётность</li>
+</ol>
+
+<p><a href="https://github.com/patgod85/timesheet2">https://github.com/patgod85/timesheet2</a></p>
+
+<p><img src="/assets/images/ember/timesheet-example.jpg" alt="Screen shot" /></p>
+
+<h1 id="section-1">Архитектура и технологии</h1>
+
+<ol>
+  <li>Есть серверная часть на Symfony2, Doctrine ORM и Mysql</li>
+  <li>В базе хранятся данные календарей в формате ical</li>
+  <li>Календари есть для компании, команды и сотрудника</li>
+  <li>На клиенте парсятся календари и отображается содержимое</li>
+  <li>Взаимодействие между клиентом и сервером при помощи REST API</li>
+  <li>Для эксперимента для реализации клиента выбран Ember.js 2</li>
+</ol>
+
+<h1 id="client-side--ember">Подход к написанию client side на Ember</h1>
+
+<ol>
+  <li>Разворачивается проект из командной строки. Я помещаю его в папку /src-client</li>
+  <li>Имеется и подразумевается использование EmberData для получения данных с сервера</li>
+  <li>Adapters существуют для настройки получения данных с сервера, выбора формата REST протокола</li>
+  <li>Для тестовых целей есть mirage, который будет мочить данные</li>
+  <li>На клиенте мы описываем модели, которые будут использованы для мапирования данных с сервера</li>
+  <li>Сущности, которыми Ember оперирует для построения UI: routes (controllers), components, helpers</li>
+  <li>Ember - маршрутоориентированный, всё отталкивается от маршрутов</li>
+  <li>Маршруты реализованы не после #, как мне удавалось видеть в других фреймворках, а как привычный URL</li>
+  <li>Создадим новый маршрут в ember-cli: <code>ember g route routename</code></li>
+  <li>Ember-cli - вспомогательная командная строка, которыми снабжаются многие фреймворки сейчас</li>
+  <li>Существует масса дополнения, которые удобно ставятся через ember-cli. Кроме того можно установить сторонние библиотеки, вроде moment.js</li>
+  <li>Удалим созданный маршрут <code>ember destroy route routename</code></li>
+  <li>В файле <code>routes.js</code> содержится описание маршрутов и их иерархия</li>
+  <li>Итак наш маршрут создан, следующий этап - это получение данных. Мы обращаемся к сервису <strong>store</strong>, он подобно ORM, 
+смотрит свой репозиторий и либо берёт из данные него либо делает запрос на сервер. Можно посмотреть пример получения 
+данных в маршруте <a href="https://github.com/patgod85/timesheet2/blob/671a3c0/src-client/timesheet/app/routes/employee.js">Employee.js</a></li>
+  <li>Запрос данных обёрнут в промис</li>
+  <li>Когда данные подготовлены, можем отобразить их в представлении, в папке templates. Место положение шаблонов определяется соглашением. 
+Движок для шаблонов - HBS.</li>
+  <li>Стоит отметить удобную возможность указания шаблона для тех случаев, когда представление “ожидает”. Просто создадим рядом шаблон routename-loading.hbs
+и его содержимое будет показываться пока не резолвятся промисы по загрузке модели.</li>
+  <li>Связывание компонентов и моделей двунаправленное, но можно организовать и однонаправленное.</li>
+  <li>При помощи actions мы можем управлять состоянием компонентов и изменять данные. 
+При изменении данных и вызове <code>model.save()</code>, они автоматически отправятся на сервер, при необходимости.
+Кроме того есть сервис <strong>Router</strong> предоставляющий метод <code>transitionTo(routename)</code> для смены маршрута</li>
+  <li>Когда стек Route -&gt; Template готов, можем запустить наше приложение. Для этого воспользуемся <code>ember server</code></li>
+  <li>Дальше остаётся писать код</li>
+  <li>После первых шагов поразило, что нет хелпера для drop down из коробки. Нужно написать его руками.</li>
+</ol>
+
+<h1 id="section-2">Дальнейшее погружение</h1>
+
+<ol>
+  <li>После первых шагов и нескольких рабочих страничек возникают некоторые проблемы, связанные с тем, что плохо разобрался в подходе к работе с данными</li>
+  <li>Для того чтобы ember в runtime перерисовывал только изменившиеся элементы интерфейса, нужно правильно подходить к связыванию. 
+В частности массивы и объекты оформлять как объекты Ember. Использовать <code>Ember.Object.create</code> и <code>.pushObjects()</code></li>
+  <li>Использовались <code>Ember.computed</code> и <code>Ember.observable</code>, они принимают список сущностей от которых зависят. 
+При зависимости от массивов существует специальный синтаксис позволяющий проверять только определённые свойства у элементов массивов, например</li>
+  <li>Важно массивы данных не перезаписывать при изменении их элементов, а корректировать при помощи таких методов как <code>map</code></li>
+  <li>Для вынесения некоторой логики в отдельный слой, например парсинг ical, использовались сервисы.</li>
+  <li>Использование сервисов реализуется через DI.</li>
+  <li>Можно настроить инжектирование сервисов в Initializers, например для всех компонентов, а можно в конкретном компоненте инжектировать сервис при помощи <code>Ember.inject.service('servicename')</code></li>
+  <li>По моему скромному мнению, удобно организовано тестирование. Каждый модуль тестируется, при этом применяются слегка разнообразные подходы. В папке tests тесты структурированы по этим подходам.
+Как это ни странно, я даже пишу и запускаю тесты перед пушами.</li>
+  <li>Для тестирования компонентов используется запуск движка HBS.</li>
+</ol>
+
+<h1 id="section-3">Бесполезные выводы</h1>
+
+<p>Из минусов:</p>
+
+<ul>
+  <li>Достаточно медленный. Конечно нужно сделать поправку на кривые руки, но в моём приложении для команды из 9 человек, 
+  расписание на 1 месяц = 31*9, то есть порядка 300 экземпляров компонентов. Строится почти 3 секунды. Это весьма неприятно.
+  Имеются техники по оптимизации их я хочу пощупать  ближайшем будущем.</li>
+  <li>У меня на Windows, при использовании <code>ember server</code>, после исправления файла в phpStorm и перехода фокуса на браузер, 
+  страница автоматически перезагружается только через пару секунд. Но я не искал пока методов ускорения сборки.</li>
+</ul>
+
+<p>Из плюсов:</p>
+
+<ul>
+  <li>Весьма читаемый код и наглядная структура проекта</li>
+  <li>Удобная инфраструктура разработки</li>
+  <li>Удобное тестирование</li>
+</ul>
+
+    </div>
+
+    <div id="tag-cloud">
+        Tags: <a href="/tag/timesheet/" rel="tag">timesheet</a>, <a href="/tag/ember/" rel="tag">ember</a>, <a href="/tag/javascript/" rel="tag">javascript</a>
+    </div>
+</article>
+
+
+
+            
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+        /*
+        var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() {  // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+
+            s.src = '//patgod85githubio.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
+
+    <div class="wrapper">
+
+        <h2 class="footer-heading">A few notes</h2>
+
+        <div class="footer-col-wrapper">
+            <div class="footer-col footer-col-1">
+                friends
+                <ul class="contact-list">
+                    <li><a href="http://trukhanov.com/">trukhanov.com</a></li>
+                    <li><a href="https://sharovatov.github.io/">sharovatov.github.io</a></li>
+                    <li><a href="https://blog.makushev.com/">blog.makushev.com</a></li>
+                    <li><a href="http://zabolotnev.com/">zabolotnev.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-col-2">
+                <ul class="social-media-list">
+                    
+                    <li>
+                        <a href="https://github.com/patgod85"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">patgod85</span></a>
+
+                    </li>
+                    
+
+                    
+                </ul>
+            </div>
+
+            <div class="footer-col footer-col-3">
+                <p>gg<br/> V<br/> G<br/> d<br/> :wq<br/>
+</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-76442843-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</footer>
+
+
+</body>
+
+</html>
