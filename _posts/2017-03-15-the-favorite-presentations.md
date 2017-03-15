@@ -2,7 +2,7 @@
 layout: post
 title:  "Понравившиеся frontend доклады"
 category: post
-tags: meetup js presentation
+tags: meetup javascript presentation
 comments: true
 ---
 
